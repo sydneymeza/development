@@ -5,13 +5,13 @@ import Songs from "./components/Songs";
 import Playlist from "./components/Playlist";
 
 function App() {
-
   return (
     <div className="App">
-      <div className="top">
-        <h1>Make a Playlist</h1>
-      </div>
-      <div className="Info">
+      <div className="mainSide">
+        <div className="top">
+          <h1>Make a Playlist</h1>
+        </div>
+
         <div className="songCards">
           <Songs />
         </div>

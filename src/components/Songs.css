@@ -1,0 +1,40 @@
+.mainStuff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.SongItems {
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+
+  display: grid;
+  grid-template-columns: auto;
+  /* width: 100%; */
+  /* height: 100%; */
+}
+.SongCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #aec5eb;
+  margin: 5%;
+  color: #3a405a;
+  /* width: 20%; */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  flex: 0 0 20%;
+  /* height: 50%; */
+}
+/* .flexible{
+    flex-grow:1;
+} */
+
+.songLength {
+  color: #707795;
+}
