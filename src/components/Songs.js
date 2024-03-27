@@ -1,6 +1,11 @@
-export default function GenreFilter(props) {
+import ArtistFilter from "./ArtistFilter";
+import GenreFilter from "./GenreFilter";
+import ResetButton from "./ResetButton";
+
+export default function Songs(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
+
 
   return (
     <div className="SongItem">

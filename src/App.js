@@ -1,35 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import songData from "./assets/song-data.json";
-import SongCard from "./components/SongCard";
+import Songs from "./components/Songs";
+
 
 function App() {
+  var ogSongList = [];
+
+  songData.map(function (item) {
+    ogSongList.push({
+      song: item.song,
+      image: item.image,
+      artist: item.artist,
+      length: item.length,
+    });
+  });
+
+  const [songList, updateSongList] = ogSongList;
+
   return (
     <div className="App">
       <div className="top">
         <h1>Make a Playlist</h1>
       </div>
       <div className="Info">
-        <div className="sort/filter">
-          <h3>sort</h3>
-          <h3>filter</h3>
-          <h3>reset</h3>
-        </div>
         <div className="songCards">
-          {/* TODO: personalize your bakery (if you want) */}
-          {songData.map(
-            (
-              item,
-              index // TODO: map bakeryData to BakeryItem components
-            ) => (
-              // <p>Bakery Item {index}</p> // replace with BakeryItem component
-              <SongCard
-                song={item.song}
-                artist={item.artist}
-                length={item.length}
-              />
-            )
-          )}
+          <Songs/>
         </div>
       </div>
       <div className="playlistSection">
