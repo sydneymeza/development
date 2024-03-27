@@ -2,21 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import songData from "./assets/song-data.json";
 import Songs from "./components/Songs";
-
+import Playlist from "./components/Playlist";
 
 function App() {
-  var ogSongList = [];
-
-  songData.map(function (item) {
-    ogSongList.push({
-      song: item.song,
-      image: item.image,
-      artist: item.artist,
-      length: item.length,
-    });
-  });
-
-  const [songList, updateSongList] = ogSongList;
 
   return (
     <div className="App">
@@ -25,11 +13,11 @@ function App() {
       </div>
       <div className="Info">
         <div className="songCards">
-          <Songs/>
+          <Songs />
         </div>
       </div>
       <div className="playlistSection">
-        <h2>Playlist #n</h2>
+        <Playlist />
       </div>
     </div>
   );

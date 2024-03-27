@@ -1,19 +1,36 @@
-import ArtistFilter from "./ArtistFilter";
-import GenreFilter from "./GenreFilter";
-import ResetButton from "./ResetButton";
+import ArtistFilter from "./Aggregators/ArtistFilter";
+import GenreFilter from "./Aggregators/GenreFilter";
+import ResetButton from "./Aggregators/ResetButton";
+import songData from "../assets/song-data.json";
 
 export default function Songs(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
+  var ogSongList = [];
+
+  songData.map(function (item) {
+    ogSongList.push({
+      song: item.song,
+      image: item.image,
+      artist: item.artist,
+      length: item.length,
+    });
+  });
+
+  const [songList, updateSongList] = ogSongList;
 
 
   return (
-    <div className="SongItem">
-      <div>{/* <img alt="photo of the album" src={props.image} /> */}</div>
-      <h1>{props.song}</h1>
-      <p>{props.artist}</p>
-      <p>{props.length}</p>
-      {/* TODO: personalize your bakery (if you want) */}
+    <div className="mainStuff">
+      <div className="buttons">
+        <ArtistFilter />
+        <GenreFilter />
+        <ResetButton />
+      </div>
+      <div className="SongItems">
+
+        {/* TODO: personalize your bakery (if you want) */}
+      </div>
     </div>
   );
 }

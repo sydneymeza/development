@@ -3,11 +3,9 @@ export default function GenreFilter(props) {
   /* add your cart state code here */
 
   return (
-    <div className="SongItem">
+    <div className="genreFilter">
       <div>{/* <img alt="photo of the album" src={props.image} /> */}</div>
-      <h1>{props.song}</h1>
-      <p>{props.artist}</p>
-      <p>{props.length}</p>
+      <button>Filter by Genre</button>
       {/* TODO: personalize your bakery (if you want) */}
     </div>
   );
