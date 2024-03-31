@@ -3,8 +3,12 @@ import "./App.css";
 import songData from "./assets/song-data.json";
 import Songs from "./components/Songs";
 import Playlist from "./components/Playlist";
+import { useState } from "react";
 
 function App() {
+
+  const [playlist, updatePlaylist]= useState([]);
+
   return (
     <div className="App">
       <div className="mainSide">
@@ -17,7 +21,7 @@ function App() {
         </div>
       </div>
       <div className="playlistSection">
-        <Playlist />
+        <Playlist playlist={playlist}/>
       </div>
     </div>
   );

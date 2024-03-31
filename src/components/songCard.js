@@ -1,5 +1,5 @@
 // TODO: create a component that displays a single bakery item
-// import songButton from "./songButton"
+import SongButton from "./SongButton";
 
 
 export default function SongCard(props) {
@@ -15,6 +15,7 @@ export default function SongCard(props) {
       <h1>{props.song}</h1>
       <p>{props.artist}</p>
       <p>{props.length}</p>
+      <SongButton/>
       {/* TODO: personalize your bakery (if you want) */}
 
     </div>

@@ -72,6 +72,7 @@ export default function SortByButton(props) {
         break;
 
       default:
+        props.updateList(props.currList);
         break;
     }
   }
