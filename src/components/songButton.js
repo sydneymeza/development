@@ -1,51 +1,37 @@
-
-
 export default function SongButton(props) {
   function handleClick() {
-    // const nextCart = { name: props.name, price: props.price, number: 1 };
-    let newSong = true;
-    let updateTime = 0.0;
+    let newItem = true;
 
     // Re-render with the new array
-
-    let newCartItem = {
-      name: props.name,
-      price: props.price,
-      number: 1,
+    let newSong = {
+      title: props.song,
+      artist: props.artist,
+      length: props.length,
     };
 
-    for (let i = 0; i < props.cartItems.length; i++) {
-      console.log(props.cartItems[i].name);
-      if (newCartItem.name === props.cartItems[i].name) {
+    if(props.playlist.length){
+    for (let i = 0; i < props.playlist.length; i++) {
+      console.log(props.playlist[i].name);
+      if (newSong.title === props.playlist[i].song) {
         newItem = false;
-        updatePrice = props.cartItems[i].price;
       }
-    }
+    }}
 
     if (newItem) {
-      props.updateCart([...props.cartItems, newCartItem]);
-      updatePrice = newCartItem.price;
+      props.updatePlaylist([...props.playlist, newSong]);
     } else {
-      props.updateCart(
-        props.cartItems.map((cartItem) => {
-          if (cartItem.name === newCartItem.name) {
-            // Create a *new* object with changes
-            return { ...cartItem, number: cartItem.number + 1 };
-          } else {
-            // No changes
-            return cartItem;
-          }
-        })
-      );
+      const updatedPlaylist = props.playlist.filter(function (song) {
+        return song.title !== newSong.title;
+      });
+      props.updatePlaylist(updatedPlaylist);
     }
-    let newPrice = props.currPrice + updatePrice;
-    let fixedPrice = Math.round(newPrice * 100) / 100;
-    props.updatePrice(fixedPrice);
   }
 
+  const [button, updateButton] = "+";
   return (
     <div className="SongButton">
-      <button onClick={handleClick}></button>
+      <button onClick={handleClick}>{button}</button>
+      {/* <p>this should be the song button</p> */}
     </div>
   );
 }

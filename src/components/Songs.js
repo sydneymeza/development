@@ -2,20 +2,19 @@ import "./Songs.css";
 import ArtistFilter from "./Aggregators/ArtistFilter";
 import GenreFilter from "./Aggregators/GenreFilter";
 import ResetButton from "./Aggregators/ResetButton";
-import songData from "../assets/song-data.json";
 import { useState } from "react";
 import SortByButton from "./Aggregators/SortBy";
-import DateObject from "react-date-object";
+import SongCard from "./SongCard";
+
 
 export default function Songs(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
   var ogSongList = [];
 
-  songData.map(function (item) {
+  props.songData.map(function (item) {
     const time = item.length.split(":");
     var date = new Date(2024, 1, 1, 0, time[0].valueOf(), time[1].valueOf());
-    // var date = DateObject($d);
     ogSongList.push({
       song: item.song,
       image: item.image,
@@ -26,7 +25,7 @@ export default function Songs(props) {
   });
 
   var artists = [];
-  songData.map(function (item) {
+  props.songData.map(function (item) {
     const words = item.artist.split(", ");
     if (words.length > 1) {
       const lastWord = words[words.length - 1];
@@ -70,14 +69,15 @@ export default function Songs(props) {
       </div>
       <div className="SongItems">
         {songList.map((song) => (
-          <div className="SongCard">
-            <h1 className="songTitle">{song.song}</h1>
-            <div className="flexible"></div>
-            <p className="songInfo">{song.artist}</p>
-            <p className="songLength">{song.length}</p>
-          </div>
+          <SongCard
+            song={song.song}
+            artist={song.artist}
+            length={song.length}
+            date={song.date}
+            playlist={props.playlist}
+            updatePlaylist={props.updatePlaylist}
+          />
         ))}
-        {/* TODO: personalize your bakery (if you want) */}
       </div>
     </div>
   );

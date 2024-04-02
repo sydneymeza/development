@@ -1,13 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import songData from "./assets/song-data.json";
 import Songs from "./components/Songs";
 import Playlist from "./components/Playlist";
 import { useState } from "react";
 
-function App() {
+// songData.forEach((item) => {
+//   item.image = process.env.PUBLIC_URL + "/" + item.image;
+// });
 
-  const [playlist, updatePlaylist]= useState([]);
+
+function App() {
+  const [playlist, updatePlaylist] = useState([]);
 
   return (
     <div className="App">
@@ -15,13 +18,12 @@ function App() {
         <div className="top">
           <h1>Make a Playlist</h1>
         </div>
-
         <div className="songCards">
-          <Songs />
+          <Songs songData={songData} playlist={playlist} updatePlaylist={updatePlaylist}/>
         </div>
       </div>
       <div className="playlistSection">
-        <Playlist playlist={playlist}/>
+        <Playlist playlist={playlist} />
       </div>
     </div>
   );
