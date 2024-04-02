@@ -35,6 +35,11 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   flex: 0 0 20%;
 }
+
+img{
+  height: 30px;
+  width: 30px;
+}
 /* .flexible{
     flex-grow:1;
 } */

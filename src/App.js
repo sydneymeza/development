@@ -4,9 +4,6 @@ import Songs from "./components/Songs";
 import Playlist from "./components/Playlist";
 import { useState } from "react";
 
-// songData.forEach((item) => {
-//   item.image = process.env.PUBLIC_URL + "/" + item.image;
-// });
 
 
 function App() {

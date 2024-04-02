@@ -76,6 +76,7 @@ export default function Songs(props) {
             date={song.date}
             playlist={props.playlist}
             updatePlaylist={props.updatePlaylist}
+            image={song.image}
           />
         ))}
       </div>

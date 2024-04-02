@@ -4,18 +4,19 @@ export default function SongButton(props) {
 
     // Re-render with the new array
     let newSong = {
-      title: props.song,
+      title: props.title,
       artist: props.artist,
       length: props.length,
     };
 
-    if(props.playlist.length){
-    for (let i = 0; i < props.playlist.length; i++) {
-      console.log(props.playlist[i].name);
-      if (newSong.title === props.playlist[i].song) {
-        newItem = false;
+    if (props.playlist.length > 0) {
+      for (let i = 0; i < props.playlist.length; i++) {
+        console.log(props.playlist[i].title);
+        if (newSong.title === props.playlist[i].title) {
+          newItem = false;
+        }
       }
-    }}
+    }
 
     if (newItem) {
       props.updatePlaylist([...props.playlist, newSong]);
