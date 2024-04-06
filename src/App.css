@@ -1,9 +1,21 @@
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+} */
+
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: row;
+
   /* width: 100%;
   height: 100%; */
+  font-family: Inter;
 }
 
 .App-logo {
@@ -18,7 +30,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f9dec9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,13 +54,45 @@
 }
 .mainSide {
   width: 80%;
+  margin-top: 2%;
   /* height: 100%; */
+}
+.top {
+  display: flex;
+  height: 4%;
+  background-color: #f9dec9;
+  color: #3a405a;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0%;
+  h1 {
+    margin: 0%;
+    padding: 3%;
+  }
 }
 
 .playlistSection {
-  background-color: antiquewhite;
+  background-color: #f9dec9;
+  color: #3a405a;
   display: flex;
   flex-direction: column;
   width: 20%;
+  position: sticky;
+  margin: 0px;
+  /* height: 50%; */
   /* height: 100%; */
+  h2 {
+    color: #685044;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.filterSortButtons {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./Playlist.css";
 //props.playlist -> the songs added to the current playlist
 
 export default function Playlist(props) {
@@ -27,51 +27,30 @@ export default function Playlist(props) {
           <div>
             <h1>Playlist #{numPlaylist}</h1>
             {props.playlist.map((song) => (
-              <div>
+              <div className="playlist-info">
                 <p>{song.title}</p>
-                <p>{song.length}</p>
+                <p className="playlist-length">{song.length}</p>
               </div>
             ))}
           </div>
           <div className="states">
-            <h2>Total number of songs:{props.playlist.length}</h2>
-            <h2>Total length:</h2>
+            <div className="playlist-info">
+              <h2>Total songs: </h2>
+              <h2>{props.playlist.length}</h2>
+            </div>
+
+            <div className="playlist-info">
+              <h2>Total length:</h2>
+            </div>
           </div>
-          <div><button onClick={resetClick}>reset</button></div>
+          <div>
+            <button className="blueButton" onClick={resetClick}>
+              reset
+            </button>
+          </div>
           {/* <h1>Total: ${props.cartPrice}</h1> */}
         </div>
       </div>
     );
   }
-
-  //   if (props.cartItems.length === 0) {
-  //     return (
-  //       <div className="playlist">
-  //         <div className="playlist" aria-label="playlist">
-  //           <div>
-  //             <h1>Playlist #{n}</h1>
-  //             <p>Nothing is here yet!</p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     );
-  //   } else {
-  //     return (
-  //       <div className="playlist">
-  //         <div className="playlist" aria-label="playlist">
-  //           <div>
-  //             <h1>Playlist #{n}</h1>
-  //             {/* {props.cartItems.map((cartItem) => (
-  //               <div>
-  //                 <p>
-  //                   {cartItem.number}x {cartItem.name}
-  //                 </p>
-  //               </div>
-  //             ))} */}
-  //           </div>
-  //           {/* <h1>Total: ${props.cartPrice}</h1> */}
-  //         </div>
-  //       </div>
-  //     );
-  //   }
 }

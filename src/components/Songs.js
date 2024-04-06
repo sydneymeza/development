@@ -6,12 +6,8 @@ import { useState } from "react";
 import SortByButton from "./Aggregators/SortBy";
 import SongCard from "./SongCard";
 
-
 export default function Songs(props) {
-  // TODO: use useState to create a state variable to hold the state of the cart
-  /* add your cart state code here */
   var ogSongList = [];
-
   props.songData.map(function (item) {
     const time = item.length.split(":");
     var date = new Date(2024, 1, 1, 0, time[0].valueOf(), time[1].valueOf());
@@ -19,6 +15,7 @@ export default function Songs(props) {
       song: item.song,
       image: item.image,
       artist: item.artist,
+      genre: item.genre,
       length: item.length,
       date: date,
     });
@@ -35,35 +32,58 @@ export default function Songs(props) {
       artists.push(words[0]);
     }
   });
-
   const artistList = [...new Set(artists)];
+
+  var genres = [];
+  props.songData.map(function (item) {
+    genres.push(item.genre);
+  });
+  const genreList = [...new Set(genres)];
+
+  console.log(ogSongList);
 
   const [songList, updateSongList] = useState(ogSongList);
   const [artistFilter, setArtistFilter] = useState("begin artist");
-  const [sort, setSorting] = useState("begin sort");
+  const [genreFilter, setGenreFilter] = useState("begin genre");
+  const [sortSetting, setSorting] = useState("begin sort");
+
+  console.log(songList);
 
   return (
     <div className="mainStuff">
-      <div className="buttons">
+      <div className="filterSortButtons">
         <SortByButton
+          ogList={ogSongList}
           currList={songList}
           updateList={updateSongList}
-          sort={sort}
+          sort={sortSetting}
           setSorting={setSorting}
         />
         <ArtistFilter
+          ogList={ogSongList}
           artistList={artistList}
-          currList={ogSongList}
+          currList={songList}
           updateList={updateSongList}
           artistFilter={artistFilter}
+          sort={sortSetting}
           setArtistFilter={setArtistFilter}
+          genreFilter={genreFilter}
         />
-        <GenreFilter />
+        <GenreFilter
+          ogList={ogSongList}
+          genreList={genreList}
+          currList={songList}
+          updateList={updateSongList}
+          genreFilter={genreFilter}
+          sort={sortSetting}
+          setGenreFilter={setGenreFilter}
+        />
         <ResetButton
           currList={songList}
           resetList={updateSongList}
           ogList={ogSongList}
           setArtistFilter={setArtistFilter}
+          setGenreFilter={setGenreFilter}
           setSorting={setSorting}
         />
       </div>
@@ -72,6 +92,7 @@ export default function Songs(props) {
           <SongCard
             song={song.song}
             artist={song.artist}
+            genre={song.genre}
             length={song.length}
             date={song.date}
             playlist={props.playlist}

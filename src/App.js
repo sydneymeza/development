@@ -11,16 +11,22 @@ function App() {
 
   return (
     <div className="App">
-      <div className="mainSide">
-        <div className="top">
-          <h1>Make a Playlist</h1>
-        </div>
-        <div className="songCards">
-          <Songs songData={songData} playlist={playlist} updatePlaylist={updatePlaylist}/>
-        </div>
+      <div className="top">
+        <h1>Make a Playlist</h1>
       </div>
-      <div className="playlistSection">
-        <Playlist playlist={playlist} />
+      <div className="body">
+        <div className="mainSide">
+          <div className="songCards">
+            <Songs
+              songData={songData}
+              playlist={playlist}
+              updatePlaylist={updatePlaylist}
+            />
+          </div>
+        </div>
+        <div className="playlistSection">
+          <Playlist playlist={playlist} />
+        </div>
       </div>
     </div>
   );

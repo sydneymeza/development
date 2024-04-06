@@ -11,70 +11,9 @@ export default function SortByButton(props) {
     "Artist Descending",
   ];
 
-  function handleChange(e) {
+  function handleClick(e) {
     props.setSorting(e.target.value);
-    switch (e.target.value) {
-      case "Title Ascending":
-        props.currList.sort(function (a, b) {
-          if (a.song < b.song) {
-            return -1;
-          }
-          if (a.song > b.song) {
-            return 1;
-          }
-          return 0;
-        });
-        break;
-
-      case "Title Descending":
-        props.currList.sort(function (a, b) {
-          if (a.song < b.song) {
-            return 1;
-          }
-          if (a.song > b.song) {
-            return -1;
-          }
-          return 0;
-        });
-        break;
-
-      case "Length Ascending":
-        props.currList.sort((a, b) => a.date - b.date);
-        break;
-
-      case "Length Descending":
-        props.currList.sort((a, b) => b.date - a.date);
-        break;
-
-      case "Artist Ascending":
-       props.currList.sort(function (a, b) {
-         if (a.artist < b.artist) {
-           return -1;
-         }
-         if (a.artist > b.artist) {
-           return 1;
-         }
-         return 0;
-       });
-        break;
-
-      case "Artist Descending":
-        props.currList.sort(function (a, b) {
-         if (a.artist < b.artist) {
-           return 1;
-         }
-         if (a.artist > b.artist) {
-           return -1;
-         }
-         return 0;
-       });
-  
-        break;
-
-      default:
-        props.updateList(props.currList);
-        break;
-    }
+    handleSort(e.target.value, props.updateList, props.currList);
   }
   return (
     <div className="sorting">
@@ -86,13 +25,8 @@ export default function SortByButton(props) {
         <select
           name="sortBy"
           id="sortBy"
-          onChange={(e) => handleChange(e)}
+          onChange={(e) => handleClick(e)}
           value={props.sort}
-          onKeyUp={(e) => {
-            if (e.key === "Enter") {
-              // onKeyDown();
-            }
-          }}
         >
           <option disabled value="begin sort">
             Sort by
@@ -107,4 +41,69 @@ export default function SortByButton(props) {
       </div>
     </div>
   );
+}
+
+export function handleSort(sortBy, updateList, currList) {
+  switch (sortBy) {
+    case "Title Ascending":
+      currList.sort(function (a, b) {
+        if (a.song < b.song) {
+          return -1;
+        }
+        if (a.song > b.song) {
+          return 1;
+        }
+        return 0;
+      });
+      break;
+
+    case "Title Descending":
+      currList.sort(function (a, b) {
+        if (a.song < b.song) {
+          return 1;
+        }
+        if (a.song > b.song) {
+          return -1;
+        }
+        return 0;
+      });
+      break;
+
+    case "Length Ascending":
+      currList.sort((a, b) => a.date - b.date);
+      break;
+
+    case "Length Descending":
+      currList.sort((a, b) => b.date - a.date);
+      break;
+
+    case "Artist Ascending":
+      currList.sort(function (a, b) {
+        if (a.artist < b.artist) {
+          return -1;
+        }
+        if (a.artist > b.artist) {
+          return 1;
+        }
+        return 0;
+      });
+      break;
+
+    case "Artist Descending":
+      currList.sort(function (a, b) {
+        if (a.artist < b.artist) {
+          return 1;
+        }
+        if (a.artist > b.artist) {
+          return -1;
+        }
+        return 0;
+      });
+
+      break;
+
+    default:
+      updateList(currList);
+      break;
+  }
 }

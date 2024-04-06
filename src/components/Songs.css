@@ -6,8 +6,18 @@
   width: 100%;
 }
 
-.buttons {
+.blueButton {
   display: flex;
+  background-color: #aec5eb;
+  color: #3a405a;
+  border-radius: 9px;
+}
+
+.yellowButton {
+  display: flex;
+  color: #685044;
+  background-color: #f9dec9;
+  border-radius: 19px;
 }
 
 .SongItems {
@@ -34,16 +44,45 @@
   /* width: 20%; */
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   flex: 0 0 20%;
+  justify-content: stretch;
+  align-items: center;
+  padding-top: 2%;
 }
-
-img{
-  height: 30px;
-  width: 30px;
+.flexible {
+  flex-grow: 1;
 }
-/* .flexible{
-    flex-grow:1;
-} */
 
 .songLength {
   color: #707795;
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 80%;
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn {
+  position: absolute;
+  top: 2%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 0rem 0.65rem 0rem;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+.container .btn:hover {
+  background-color: #f3ceb2;
 }

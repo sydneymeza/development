@@ -1,0 +1,7 @@
+.playlist-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 8%;
+}
