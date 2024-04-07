@@ -1,9 +1,6 @@
-import { handleSort } from "./filterSortFunctions";
+import { handleSort } from "../Functions";
 
 export default function SortByButton(props) {
-  // TODO: use useState to create a state variable to hold the state of the cart
-  /* add your cart state code here */
-
   const sortList = [
     "Title Ascending",
     "Title Descending",

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Dispatch, SetStateAction } from "react";
-import { handleSort } from "./filterSortFunctions";
-import { Filter } from "./filterSortFunctions";
+import { handleSort, Filter } from "../Functions";
 
 export default function GenreFilter(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
@@ -20,7 +19,6 @@ export default function GenreFilter(props) {
     );
 
     handleSort(props.sort, props.updateList, newList);
-    // props.updateList(newList);
   }
 
   return (

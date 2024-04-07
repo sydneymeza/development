@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Dispatch, SetStateAction } from "react";
-import { handleSort } from "./filterSortFunctions";
-import { Filter } from "./filterSortFunctions";
+import { handleSort, Filter } from "../Functions";
+
 
 export default function ArtistFilter(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
@@ -20,7 +20,7 @@ export default function ArtistFilter(props) {
     );
 
     handleSort(props.sort, props.updateList, newList);
-    // props.updateList(newList);
+    props.updateList(newList);
   }
 
   return (

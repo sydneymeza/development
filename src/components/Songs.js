@@ -40,14 +40,10 @@ export default function Songs(props) {
   });
   const genreList = [...new Set(genres)];
 
-  console.log(ogSongList);
-
   const [songList, updateSongList] = useState(ogSongList);
   const [artistFilter, setArtistFilter] = useState("begin artist");
   const [genreFilter, setGenreFilter] = useState("begin genre");
   const [sortSetting, setSorting] = useState("begin sort");
-
-  console.log(songList);
 
   return (
     <div className="mainStuff">

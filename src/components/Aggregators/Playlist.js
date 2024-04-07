@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Playlist.css";
+
 //props.playlist -> the songs added to the current playlist
 
 export default function Playlist(props) {
@@ -7,6 +8,7 @@ export default function Playlist(props) {
 
   function resetClick() {
     setNumPlaylist(numPlaylist + 1);
+    props.updatePlaylist([]);
   }
 
   if (props.playlist.length === 0) {
@@ -37,10 +39,6 @@ export default function Playlist(props) {
             <div className="playlist-info">
               <h2>Total songs: </h2>
               <h2>{props.playlist.length}</h2>
-            </div>
-
-            <div className="playlist-info">
-              <h2>Total length:</h2>
             </div>
           </div>
           <div>

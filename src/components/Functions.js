@@ -37,8 +37,6 @@ export function Filter(
       newList.push(ogSong);
     });
   } else if (filter.includes("no") && otherFilter.includes("begin")) {
-    console.log(filter);
-    console.log(otherFilter);
     ogList.map((ogSong) => {
       newList.push(ogSong);
     });
@@ -66,10 +64,12 @@ export function Filter(
       }
     });
   }
+  console.log(newList);
   return newList;
 }
 
 export function handleSort(sortBy, updateList, currList) {
+  console.log(currList);
   switch (sortBy) {
     case "Title Ascending":
       currList.sort(function (a, b) {
@@ -133,4 +133,3 @@ export function handleSort(sortBy, updateList, currList) {
       break;
   }
 }
-

@@ -1,7 +1,7 @@
 import "./App.css";
 import songData from "./assets/song-data.json";
 import Songs from "./components/Songs";
-import Playlist from "./components/Playlist";
+import Playlist from "./components/Aggregators/Playlist";
 import { useState } from "react";
 
 
@@ -25,7 +25,7 @@ function App() {
           </div>
         </div>
         <div className="playlistSection">
-          <Playlist playlist={playlist} />
+          <Playlist playlist={playlist} updatePlaylist={updatePlaylist}/>
         </div>
       </div>
     </div>
