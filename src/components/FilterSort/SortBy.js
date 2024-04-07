@@ -1,4 +1,4 @@
-import {handleSort} from "./filterSortFunctions";
+import { handleSort } from "./filterSortFunctions";
 
 export default function SortByButton(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
@@ -44,4 +44,3 @@ export default function SortByButton(props) {
     </div>
   );
 }
-

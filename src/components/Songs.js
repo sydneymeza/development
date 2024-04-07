@@ -1,9 +1,9 @@
 import "./Songs.css";
-import ArtistFilter from "./Aggregators/ArtistFilter";
-import GenreFilter from "./Aggregators/GenreFilter";
-import ResetButton from "./Aggregators/ResetButton";
+import ArtistFilter from "./FilterSort/ArtistFilter";
+import GenreFilter from "./FilterSort/GenreFilter";
+import ResetButton from "./FilterSort/ResetButton";
 import { useState } from "react";
-import SortByButton from "./Aggregators/SortBy";
+import SortByButton from "./FilterSort/SortBy";
 import SongCard from "./SongCard";
 
 export default function Songs(props) {
