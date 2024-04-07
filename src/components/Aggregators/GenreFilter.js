@@ -1,25 +1,26 @@
 import * as React from "react";
 import { Dispatch, SetStateAction } from "react";
-import { handleSort } from "./SortBy";
+import { handleSort } from "./filterSortFunctions";
+import { Filter } from "./filterSortFunctions";
 
 export default function GenreFilter(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
 
   function change(e) {
-    props.setGenreFilter(e.target.value);
-    const newList = [];
-    props.currList.map((song) => {
-      if (song.genre.includes(e.target.value)) {
-        newList.push(song);
-      } else if (e.target.value.includes("no genre")) {
-        props.ogList.map((ogSong) => {
-          newList.push(ogSong);
-        });
-      }
-    });
-    handleSort(props.sort, props.updateList, newList);
+    const filter = e.target.value;
 
+    const newList = Filter(
+      filter,
+      props.setGenreFilter,
+      props.currList,
+      props.ogList,
+      "genre",
+      props.artistFilter
+    );
+
+    handleSort(props.sort, props.updateList, newList);
+    // props.updateList(newList);
   }
 
   return (

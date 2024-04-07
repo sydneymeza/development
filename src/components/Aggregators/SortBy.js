@@ -1,3 +1,5 @@
+import {handleSort} from "./filterSortFunctions";
+
 export default function SortByButton(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
   /* add your cart state code here */
@@ -43,67 +45,3 @@ export default function SortByButton(props) {
   );
 }
 
-export function handleSort(sortBy, updateList, currList) {
-  switch (sortBy) {
-    case "Title Ascending":
-      currList.sort(function (a, b) {
-        if (a.song < b.song) {
-          return -1;
-        }
-        if (a.song > b.song) {
-          return 1;
-        }
-        return 0;
-      });
-      break;
-
-    case "Title Descending":
-      currList.sort(function (a, b) {
-        if (a.song < b.song) {
-          return 1;
-        }
-        if (a.song > b.song) {
-          return -1;
-        }
-        return 0;
-      });
-      break;
-
-    case "Length Ascending":
-      currList.sort((a, b) => a.date - b.date);
-      break;
-
-    case "Length Descending":
-      currList.sort((a, b) => b.date - a.date);
-      break;
-
-    case "Artist Ascending":
-      currList.sort(function (a, b) {
-        if (a.artist < b.artist) {
-          return -1;
-        }
-        if (a.artist > b.artist) {
-          return 1;
-        }
-        return 0;
-      });
-      break;
-
-    case "Artist Descending":
-      currList.sort(function (a, b) {
-        if (a.artist < b.artist) {
-          return 1;
-        }
-        if (a.artist > b.artist) {
-          return -1;
-        }
-        return 0;
-      });
-
-      break;
-
-    default:
-      updateList(currList);
-      break;
-  }
-}

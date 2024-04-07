@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Dispatch, SetStateAction } from "react";
-import { handleSort } from "./SortBy";
+import { handleSort } from "./filterSortFunctions";
+import { Filter } from "./filterSortFunctions";
 
 export default function ArtistFilter(props) {
   // TODO: use useState to create a state variable to hold the state of the cart
@@ -9,7 +10,7 @@ export default function ArtistFilter(props) {
   function change(e) {
     const filter = e.target.value;
 
-    const newList = filterArtists(
+    const newList = Filter(
       filter,
       props.setArtistFilter,
       props.currList,
@@ -47,67 +48,3 @@ export default function ArtistFilter(props) {
   );
 }
 
-export function filterArtists(
-  filter,
-  setFilter,
-  currentList,
-  ogList,
-  filterby,
-  otherFilter
-) {
-  setFilter(filter);
-  const newList = [];
-  currentList.map((song) => {
-    var checkFilter = false;
-    var checkOtherFilter = false;
-    switch (filterby) {
-      case "artist":
-        checkFilter = song.artist.includes(filter);
-        checkOtherFilter =
-          song.genre.includes(otherFilter) || otherFilter.includes("begin");
-        console.log(song.song);
-        console.log(checkFilter);
-        console.log(song.artist);
-        console.log(checkOtherFilter);
-
-        break;
-      case "genre":
-        checkFilter = song.genre.includes(filter);
-        checkOtherFilter =
-          song.artist.includes(otherFilter) || otherFilter.includes("begin");
-        break;
-      default:
-        break;
-    }
-
-    if (checkFilter && checkOtherFilter) {
-      newList.push(song);
-    }
-  });
-
-  if (filter.includes("no") && otherFilter.includes("no")) {
-    ogList.map((ogSong) => {
-      newList.push(ogSong);
-    });
-  } else if (newList.length === 0) {
-    ogList.map((ogSong) => {
-      var checkOther = false;
-      switch (filterby) {
-        case "artist":
-          checkOther = ogSong.genre.includes(otherFilter);
-          break;
-        case "genre":
-          checkOther = ogSong.artist.includes(otherFilter);
-          break;
-        default:
-          break;
-      }
-      if (checkOther) {
-        newList.push(ogSong);
-      }
-    });
-  }
-
-  console.log(newList);
-  return newList;
-}

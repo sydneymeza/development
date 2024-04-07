@@ -77,6 +77,7 @@ export default function Songs(props) {
           genreFilter={genreFilter}
           sort={sortSetting}
           setGenreFilter={setGenreFilter}
+          artistFilter={artistFilter}
         />
         <ResetButton
           currList={songList}
