@@ -66,6 +66,7 @@
   align-items: center;
   margin-bottom: 0%;
   h1 {
+    font-family: 'Philosopher';
     margin: 0%;
     padding: 3%;
   }
@@ -79,9 +80,8 @@
   width: 20%;
   position: sticky;
   margin: 0px;
-  /* height: 50%; */
-  /* height: 100%; */
   h2 {
+    font-family: 'Inter';
     color: #685044;
   }
 }
@@ -92,7 +92,11 @@
   margin-top: 0px;
 }
 
-.filterSortButtons {
-  display: flex;
-  flex-direction: row;
+button:hover{
+  cursor: pointer;
+
+}
+
+select:hover{
+  cursor: pointer;
 }

@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+
+
+/* @font-face {
+  font-family: 'Inter';
+  src: local('Inter-Regular'), url(./assets/Inter/static/Inter-Regular.ttf) format('ttf');
+  src: local('Inter-Light'), url(./assets/Inter/static/Inter-Light.ttf) format('ttf');
+  src: local('Inter-Bold'), url(./assets/Inter/static/Inter-Bold.ttf) format('ttf');
+  src: local('Inter-SemiBold'), url(./assets/Inter/static/Inter-SemiBold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Philosopher';
+  src: local('Philosopher-Regular'), url(./assets/Philosopher/Philosopher-Regular.ttf) format('ttf');
+  src: local('Philosopher-Bold'), url(./assets/Philosopher/Philosopher-Bold.ttf) format('ttf');
+} */

@@ -17,14 +17,16 @@ export default function Playlist(props) {
         <div className="playlist" aria-label="playlist">
           <div>
             <h1>Playlist #{numPlaylist}</h1>
-            <p>Nothing is here yet!</p>
+            <div className="playlist-info">
+              <p>Nothing is here yet!</p>
+            </div>
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="playlist">
+      <div className="playlist-area">
         <div className="playlist" aria-label="playlist">
           <div>
             <h1>Playlist #{numPlaylist}</h1>
@@ -41,9 +43,9 @@ export default function Playlist(props) {
               <h2>{props.playlist.length}</h2>
             </div>
           </div>
-          <div>
+          <div className="playlist-button">
             <button className="blueButton" onClick={resetClick}>
-              reset
+              New Playlist
             </button>
           </div>
           {/* <h1>Total: ${props.cartPrice}</h1> */}

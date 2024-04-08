@@ -1,7 +1,20 @@
+.playlist{
+  font-family:'Philosopher';
+}
 .playlist-info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 5%;
   padding-right: 8%;
+  font-family: 'Inter';
+  
 }
+
+.playlist-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

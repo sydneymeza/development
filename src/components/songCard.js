@@ -15,6 +15,7 @@ export default function SongCard(props) {
           updatePlaylist={props.updatePlaylist}
         />
       </div>
+
       <div className="flexible"></div>
       <h1 className="songTitle">{props.song}</h1>
       <div className="flexible"></div>
@@ -24,6 +25,7 @@ export default function SongCard(props) {
       <div className="flexible"></div>
       <p className="songLength">{props.length}</p>
       <div className="flexible"></div>
+
     </div>
   );
 }
