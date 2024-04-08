@@ -1,4 +1,4 @@
-// TODO: create a component that displays a single bakery item
+
 import SongButton from "./Aggregators/SongButton";
 
 export default function SongCard(props) {
