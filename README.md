@@ -1,6 +1,8 @@
 # development
 Development is a react app that encouages users to create playlists from the given song data, they can filter the data by artist, or by genre. Users can also sort the data A-Z/Z-A by title, artist, and then also sort by the length of a song. 
 
+You can see the deployed app here https://development-orcin-eight.vercel.app/
+
 ## components
 The main components of this app are separated into Songs.js, SongCard.js, and Playlist.js. 
 
