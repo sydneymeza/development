@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Dispatch, SetStateAction } from "react";
-import { handleSort, Filter } from "../Functions";
+import { handleSort, Filter } from "./Functions";
 
 
 export default function ArtistFilter(props) {

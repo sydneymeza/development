@@ -1,4 +1,4 @@
-import { handleSort } from "../Functions";
+import { handleSort } from "./Functions";
 
 export default function SortByButton(props) {
   const sortList = [
