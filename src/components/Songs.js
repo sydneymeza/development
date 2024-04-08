@@ -4,7 +4,7 @@ import GenreFilter from "./FilterSort/GenreFilter";
 import ResetButton from "./FilterSort/ResetButton";
 import { useState } from "react";
 import SortByButton from "./FilterSort/SortBy";
-import SongCard from "./SongCard";
+import SongCard from "./songCard";
 
 export default function Songs(props) {
   var ogSongList = [];
