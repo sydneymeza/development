@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <div className="top">
-        <h1>Make a Playlist</h1>
+        <h1>Mix Mate</h1>
       </div>
       <div className="body">
         <div className="mainSide">
