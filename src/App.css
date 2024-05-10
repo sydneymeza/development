@@ -11,8 +11,6 @@
 } */
 
 .App {
-  text-align: center;
-
   /* width: 100%;
   height: 100%; */
   font-family: Inter;
@@ -73,6 +71,7 @@
 }
 
 .playlistSection {
+  text-align: center;
   background-color: #f9dec9;
   color: #3a405a;
   display: flex;
