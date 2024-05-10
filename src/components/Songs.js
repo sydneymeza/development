@@ -18,6 +18,7 @@ export default function Songs(props) {
       genre: item.genre,
       length: item.length,
       date: date,
+      alt: item.alt,
     });
   });
 
@@ -95,6 +96,7 @@ export default function Songs(props) {
             playlist={props.playlist}
             updatePlaylist={props.updatePlaylist}
             image={song.image}
+            alt={song.alt}
           />
         ))}
       </div>

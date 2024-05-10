@@ -5,7 +5,7 @@ export default function SongCard(props) {
   return (
     <div className="SongCard">
       <div className="container">
-        <img src={process.env.PUBLIC_URL + "/" + props.image} />
+        <img src={process.env.PUBLIC_URL + "/" + props.image} alt={props.alt}/>
         <SongButton
           title={props.song}
           artist={props.artist}

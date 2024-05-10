@@ -4,125 +4,143 @@
     "artist": "Fitz and the Tantrums",
     "image": "images/fitz.jpeg",
     "genre": "Alternative",
-    "length": "3:29"
+    "length": "3:29",
+    "alt": "image of the 'More Than Just a Dream' album by Fitz and The Tantrums"
   },
   {
     "song": "Tongue Tied",
     "artist": "GROUPLOVE",
     "image": "images/tongue.jpeg",
     "genre": "Alternative",
-    "length": "3:38"
+    "length": "3:38",
+    "alt": "image of the 'Never Trust a Happy Song' album by GROUPLOVE"
   },
   {
     "song": "The Less I Know the Better",
     "artist": "Tame Impala",
     "image": "images/tame-impala.jpeg",
     "genre": "Alternative",
-    "length": "3:36"
+    "length": "3:36",
+    "alt": "image of the 'Currents' album by Tame Impala"
   },
   {
     "song": "Tear in My Heart",
     "artist": "Twenty One Pilots",
     "image": "images/tear-in-my-heart.jpeg",
     "genre": "Alternative",
-    "length": "3:08"
+    "length": "3:08",
+    "alt": "image of the 'Blurryface' album by Twenty One Pilots"
   },
   {
     "song": "What You Know",
     "artist": "Two Door Cinema Club",
     "image": "images/what-you-know.jpeg",
     "genre": "Alternative",
-    "length": "3:12"
+    "length": "3:12",
+    "alt": "image of the 'Tourist History' album by Two Door Cinema Club"
   },
   {
     "song": "I Want You Back",
     "artist": "The Jackson 5",
     "image": "images/want-you-back.jpeg",
     "genre": "Pop",
-    "length": "2:56"
+    "length": "2:56",
+    "alt": "image of the 'Diana Ross Presents the Jackso 5' album by The Jackson 5"
   },
   {
     "song": "3005",
     "artist": "Childish Gambino",
     "image": "images/3005.jpeg",
     "genre": "Hip-Hop/Rap",
-    "length": "3:54"
+    "length": "3:54",
+    "alt": "image of the 'Because the Internet' album by Childish Gambino"
   },
   {
     "song": "Electric Love",
     "artist": "BØRNS",
     "image": "images/electric-love.jpeg",
     "genre": "Alternative",
-    "length": "2:57"
+    "length": "2:57",
+    "alt": "image of the 'Dopamine' album by BØRNS"
   },
   {
     "song": "Everybody Talks",
     "artist": "Neon Trees",
     "image": "images/everybody-talks.jpeg",
     "genre": "Pop",
-    "length": "2:57"
+    "length": "2:57",
+    "alt": "image of the 'Pcture Show' album by Neon Trees"
   },
   {
     "song": "Young Folks",
     "artist": "Peter Bjorn and John",
     "image": "images/young-folks.jpeg",
     "genre": "Pop",
-    "length": "4:37"
+    "length": "4:37",
+    "alt": "image of the 'Writer's Block' album by Peter Bjorn and John"
   },
   {
     "song": "Hot Rod",
     "artist": "Dayglow",
     "image": "images/dayglow.jpeg",
     "genre": "Alternative",
-    "length": "3:24"
+    "length": "3:24",
+    "alt": "image of the 'Fuzzybrain' album by Dayglow"
   },
   {
     "song": "Calling After Me",
     "artist": "Wallows",
     "image": "images/calling-after-me.jpeg",
     "genre": "Alternative",
-    "length": "3:07"
+    "length": "3:07",
+    "alt": "image of the 'Calling After Me' single by Wallows"
   },
   {
     "song": "Flaming Hot Cheetos",
     "artist": "Clairo",
     "image": "images/flaming-hot-cheetos.jpeg",
     "genre": "Alternative",
-    "length": "2:03"
+    "length": "2:03",
+    "alt": "image of the 'diary 001' album by Clairo"
   },
   {
     "song": "Time Machine",
     "artist": "WILLOW",
     "image": "images/willow.jpg",
     "genre": "Alternative",
-    "length": "2:23"
+    "length": "2:23",
+    "alt": "image of the 'WILLOW' album by WILLOW"
   },
   {
     "song": "Can I Call You Tonight",
     "artist": "Dayglow",
     "image": "images/dayglow.jpeg",
     "genre": "Alternative",
-    "length": "4:39"
+    "length": "4:39",
+    "alt": "image of the 'Fuzzybrain' album by Dayglow"
   },
   {
     "song": "Are You Bored Yet? (feat. Clairo)",
     "artist": "Wallows, Clairo",
     "image": "images/are-you-bored-yet.jpg",
     "genre": "Alternative",
-    "length": "2:58"
+    "length": "2:58",
+    "alt": "image of the 'Nothing Happens' album by Wallows"
   },
   {
     "song": "Pleaser",
     "artist": "Wallows",
     "image": "images/pleaser.jpeg",
     "genre": "Alternative",
-    "length": "3:08"
+    "length": "3:08",
+    "alt": "image of the 'Pleaser' album by Wallows"
   },
   {
     "song": "Wait a Minute!",
     "artist": "WILLOW",
     "image": "images/willow.jpg",
     "genre": "Alternative",
-    "length": "3:16"
+    "length": "3:16",
+    "alt": "image of the 'ARDIPITHECUS' album by WILLOW"
   }
 ]
